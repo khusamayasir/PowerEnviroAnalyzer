@@ -1,0 +1,297 @@
+body {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3 !important;
+  overflow: hidden;
+}
+* {
+  user-select: auto !important;
+}
+#root {
+  display: flex !important;
+  flex-direction: column;
+  padding: 0 !important;
+  margin: 0 !important;
+  /* min-height: 100vh !important; */
+}
+
+.img_bg {
+  /* background-image: url("../assets/clients-bg1.jpg"); */
+  /* background-image: url("../assets/bgLogin.jpeg"); */
+  /* background-image: url("../assets/FS_bank_Building_City.jpg"); */
+  background-size: cover;
+  background-position: center;
+}
+
+.LoginBg {
+  background-color: #0d633c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex: 1;
+}
+
+.loginESquareTxt {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.loginDashboard {
+  /* display: flex; */
+  position: relative;
+  /* padding: 10.25rem 29.125rem 7.875rem 29.1875rem; */
+  padding: 20px;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column;
+  background-color: #ffffffbf;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 1px 0 rgba(0, 0, 0, 0.19);
+  /* width: 31.6875rem !important;
+    height: 29.875rem !important; */
+  /* flex-shrink: 0; */
+}
+
+.loginInputs {
+  border-radius: 0.3125rem !important;
+  background: #f4f4f4 !important;
+  border: none !important;
+  width: 100% !important;
+  height: 2.5rem !important;
+  padding: 8px !important;
+}
+
+.loginInputs:focus {
+  border: none;
+  outline: none;
+}
+
+.loginInputs {
+  border-radius: 0.3125rem !important;
+  background: #f4f4f4 !important;
+  border: none !important;
+  width: 100% !important;
+  height: 2.5rem !important;
+  padding: 8px !important;
+}
+
+.loginInputs:focus {
+  border: none;
+  outline: none;
+}
+
+.loginDashboardCompany {
+  margin-bottom: 0;
+}
+
+.img_bg {
+  /* background-image: url("../assets/clients-bg1.jpg"); */
+  /* background-image: url("../assets/bgLogin.jpeg"); */
+  /* background-image: url("../assets/FS_bank_Building_City.jpg"); */
+  background-size: cover;
+  background-position: center;
+}
+
+.LoginBg {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex: 1;
+}
+
+.loginDashboardCompany {
+  margin-bottom: 0;
+}
+
+.navbarText {
+  /* font-family: Outfit; */
+  /* font-size: 16px; */
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.forgotPassword {
+  color: #2d2d2d;
+  font-size: 1rem;
+  font-family: Crete Round;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.dashboard-text {
+  color: #718096;
+  /* font-family: Inter; */
+  font-size: small !important;
+}
+.company-loc-summary {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+.company-loc-summary {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+.dashboard-table-header {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.dashboard-table-text {
+  font-family: Roboto;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.employee-management-dropdown {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "DM Sans" !important;
+  font-size: small !important;
+  color: #081735 !important;
+  font-weight: 400;
+  line-height: 32px !important;
+  letter-spacing: 0em;
+  text-align: left !important;
+  background-color: #f3f3f3;
+}
+.employee-management-dropdown-padding3 {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "DM Sans" !important;
+  font-size: small !important;
+  color: #081735 !important;
+  font-weight: 400;
+  line-height: 32px !important;
+  letter-spacing: 0em;
+  text-align: left !important;
+  background-color: #f3f3f3;
+}
+.outfit-family {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.poppins-family {
+  font-family: "Poppins", sans-serif;
+}
+.poppins-family {
+  font-family: "Poppins", sans-serif;
+}
+
+.crete-family {
+  font-family: "Crete Round", serif;
+  /* font-size: 0.8rem !important; */
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.roboto-family {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+
+  /* text-align: left; */
+  color: #1e1e1e;
+}
+.roboto-400 {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.DMSans-family {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.inter-family {
+  font-family: "Inter", sans-serif;
+}
+
+.cardtext {
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+
+.card-chart {
+  color: black !important;
+  text-align: left !important;
+  padding: 0px !important;
+  background-clip: border-box !important;
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.card-header {
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+
+  margin-bottom: 0p !important;
+}
+
+.GenrateReport {
+  background-color: #0d633c !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: small !important;
+}
+
+.flex-1 {
+  flex: 1 1 0 !important;
+}
+.flex-2 {
+  flex: 2 1 0 !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+.w-10 {
+  width: 10% !important;
+}
+.w-5 {
+  width: 5% !important;
+}
+.w-80 {
+  width: 80% !important;
+}
+.w-90 {
+  width: 90% !important;
+}
+.w-95 {
+  width: 95% !important;
+}
+
+.borderLeftReport {
+  border-left: 1px solid #d5d5d5;
+}
+
+#sideMenu {
+  transition: width 1.0s ease;
+}
