@@ -109,22 +109,22 @@ function DashboardComponent(props) {
                     <CardTitle tag="h6">
                       <div className="d-flex justify-content-between mb-2">
                         <div>Voltage</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Current</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Frequency</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
@@ -152,22 +152,22 @@ function DashboardComponent(props) {
                     <CardTitle tag="h6">
                       <div className="d-flex justify-content-between mb-2">
                         <div>Voltage</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Current</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Frequency</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
@@ -195,22 +195,22 @@ function DashboardComponent(props) {
                     <CardTitle tag="h6">
                       <div className="d-flex justify-content-between mb-2">
                         <div>Voltage</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Current</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Frequency</div>
-                        <div>{}</div>
+                        <div>0</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">

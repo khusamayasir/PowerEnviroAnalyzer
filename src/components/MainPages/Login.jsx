@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/enviro-breath-logo.jpg";
+import logo from "../../assets/power-enviro-analyzer-logo.jpeg";
 import cancel from "../../assets/cancel.svg";
 import eye from "../../assets/eye-show.svg";
 import eyeSlash from "../../assets/eye-hide.svg";

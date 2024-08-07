@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
-import image from "../../assets/enviro-breath-logo.jpg";
+import image from "../../assets/power-enviro-analyzer-logo.jpeg";
 
 const Sidebar = ({ handleCallBack }) => {
   const [isNotActive, setNotActive] = useState(true);
