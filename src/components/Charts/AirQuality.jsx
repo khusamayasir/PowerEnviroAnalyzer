@@ -18,14 +18,14 @@ const AirQualityGraph = () => {
   }, []);
 
   const setDoc = () => {
-    axios.get(`http://localhost:8000/getSensorData`)
-      .then(res => {
-        const newData = res.data.slice(-24);
-        setAir(newData);
-        setLabels([...labels.slice(-24)]);
-        console.log(res, `from our server`);
-      })
-      .catch(e => console.log(e));
+    // axios.get(`http://localhost:8000/getSensorData`)
+    //   .then(res => {
+    //     const newData = res.data.slice(-24);
+    //     setAir(newData);
+    //     setLabels([...labels.slice(-24)]);
+    //     console.log(res, `from our server`);
+    //   })
+    //   .catch(e => console.log(e));
   };
 
   const data = {
