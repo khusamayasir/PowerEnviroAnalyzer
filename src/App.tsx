@@ -14,36 +14,29 @@ import {
   useLocation,
   useNavigate,
 } from "react-router-dom";
-const newLocal = "./components/MainPages/Login";
-const Login = lazy(() => import(newLocal));
-const newLocal_1 = "./components/MainPages/Dashboard";
-const Dashboard = lazy(() => import(newLocal_1));
-const newLocal_2 = "./components/Sidebar/sidebar";
-const Sidebar = lazy(() => import(newLocal_2));
-const newLocal_3 = "./components/MainPages/Reports";
-const Report = lazy(() => import(newLocal_3));
-const newLocal_4 = "./components/MainPages/LoadOne";
-const LoadOne = lazy(() => import(newLocal_4));
-const newLocal_5 = "./components/MainPages/LoadTwo";
-const LoadTwo = lazy(() => import(newLocal_5));
-const newLocal_6 = "./components/MainPages/LoadThree";
-const LoadThree = lazy(() => import(newLocal_6));
+// @ts-ignore
+import Login from "./components/MainPages/Login";
+// @ts-ignore
+import Sidebar from "./components/Sidebar/sidebar";
+// @ts-ignore
+import Dashboard from "./components/MainPages/Dashboard";
+// @ts-ignore
+import Reports from "./components/MainPages/Reports";
+// @ts-ignore
+import LoadOne from "./components/MainPages/LoadOne";
+// @ts-ignore
+import LoadTwo from "./components/MainPages/LoadTwo";
+// @ts-ignore
+import LoadThree from "./components/MainPages/LoadThree";
 import "./App.css";
 import "./styleSheets/Style.css";
 import { Col } from "react-bootstrap";
+
 function App() {
   const headerExcludingScreens = ["/"];
   const [path, setPath] = useState(window.location.pathname);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const routes: { path: string; element: ReactNode }[] = [
-    { path: "/", element: <Login /> },
-    { path: "/Dashboard", element: <Dashboard /> },
-    { path: "/Report", element: <Report /> },
-    { path: "/LoadOne", element: <LoadOne /> },
-    { path: "/LoadTwo", element: <LoadTwo /> },
-    { path: "/LoadThree", element: <LoadThree /> },
 
-  ];
   // useEffect(() =>
   //   { setPath(window.location.pathname)},
   // [window.location.pathname])
@@ -72,17 +65,14 @@ function App() {
             //     : 12
             // }
           >
-            <Suspense fallback={<p>Loading..</p>}>
-              <Routes>
-                {routes.map((route, index) => (
-                  <Route
-                    key={index}
-                    path={route.path}
-                    element={route.element}
-                  />
-                ))}
-              </Routes>
-            </Suspense>
+             <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/Dashboard" element={<Dashboard />} />
+              <Route path="/Report" element={<Reports />} />
+              <Route path="/LoadOne" element={<LoadOne/>} />
+              <Route path="/LoadTwo" element={<LoadTwo/>} />
+              <Route path="/LoadThree" element={<LoadThree/>} />
+            </Routes>
           </div>
         </div>
       </BrowserRouter>
