@@ -1,18 +1,10 @@
 import React, {
-  useEffect,
   useState,
-  useContext,
-  ReactNode,
-  Suspense,
-  lazy,
 } from "react";
 import {
   BrowserRouter,
-  Navigate,
   Route,
   Routes,
-  useLocation,
-  useNavigate,
 } from "react-router-dom";
 // @ts-ignore
 import Login from "./components/MainPages/Login";
