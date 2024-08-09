@@ -27,20 +27,35 @@ import HeadingTag from "../HeadingTag";
 
 function DashboardComponent(props) {
   //const [bigChartData, setbigChartData] = React.useState("data1");
-  // const [temperature, setTemperature] = useState(0);
-  // const [humidity, setHumidity] = useState(0);
-  // const [airQuality, setAirQuality] = useState(0);
-  // const [pressure, setPressure] = useState(0);
-  // const [location, setLocation] = useState("");
-  // const [methane, setMethane] = useState(0);
-  // const [alcohol, setAlcohol] = useState(0);
-  // const [carbonMonoxide, setCarbonMonoxide] = useState(0);
-  // const [flammable, setFlammable] = useState(0);
+  //LOAD 1
+  const [voltage1, setVoltage1] = useState('');
+  const [current1, setCurrent1] = useState('');
+  const [power1, setPower1] = useState('');
+  const [frequency1, setFrequency1] = useState('');
+  const [powerFactor1, setPowerFactor1] = useState('');
+  const [energy1, setEnergy1] = useState('');
+  //LOAD 2
+  const [voltage2, setVoltage2] = useState('');
+  const [current2, setCurrent2] = useState('');
+  const [power2, setPower2] = useState('');
+  const [frequency2, setFrequency2] = useState('');
+  const [powerFactor2, setPowerFactor2] = useState('');
+  const [energy2, setEnergy2] = useState('');
+  //LOAD 3
+  const [voltage3, setVoltage3] = useState('');
+  const [current3, setCurrent3] = useState('');
+  const [power3, setPower3] = useState('');
+  const [frequency3, setFrequency3] = useState('');
+  const [powerFactor3, setPowerFactor3] = useState('');
+  const [energy3, setEnergy3] = useState('');
+  const [smoke, setSmoke] = useState('');
+  const [temperature, setTemperature] = useState('');
+  const [humidity, setHumidity] = useState('');
 
   useEffect(() => {
     const interval = setInterval(() => {
       setDoc();
-    }, 30000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -51,14 +66,41 @@ function DashboardComponent(props) {
       .get(url)
       .then((response) => {
         console.log("API Data", response.data);
-        // setTemperature(response.data.V0);
-        // setHumidity(response.data.V1);
-        // setAirQuality(response.data.V2);
-        // setLocation(response.data.V3);
-        // setMethane(response.data.V4);
-        // setAlcohol(response.data.V5);
-        // setCarbonMonoxide(response.data.V6);
-        // setFlammable(response.data.V7);
+        const data = response.data;
+
+        // Map the API data into state
+        data.forEach((item) => {
+          console.log("hehe",data)
+          switch(item.param) {
+              //LOAD 1
+              case 'voltage1': setVoltage1(item.value); break;
+              case 'current1': setCurrent1(item.value); break;
+              case 'power1': setPower1(item.value); break;
+              case 'frequency1': setFrequency1(item.value); break;
+              case 'power_factor1': setPowerFactor1(item.value); break;
+              case 'energy1': setEnergy1(item.value); break;
+              //LOAD 2
+              case 'voltage2': setVoltage2(item.value); break;
+              case 'current2': setCurrent2(item.value); break;
+              case 'power2': setPower2(item.value); break;
+              case 'frequency2': setFrequency2(item.value); break;
+              case 'power_factor2': setPowerFactor2(item.value); break;
+              case 'energy2': setEnergy2(item.value); break;
+              //LOAD 3
+              case 'voltage3': setVoltage3(item.value); break;
+              case 'current3': setCurrent3(item.value); break;
+              case 'power3': setPower3(item.value); break;
+              case 'frequency3': setFrequency3(item.value); break;
+              case 'power_factor3': setPowerFactor3(item.value); break;
+              case 'energy3': setEnergy3(item.value); break;
+              //Environmental Data
+              case 'smoke': setSmoke(item.value); break;
+              case 'temperature': setTemperature(item.value); break;
+              case 'humidity': setHumidity(item.value); break;
+              default: break;
+            }
+          }
+        );
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -71,14 +113,41 @@ function DashboardComponent(props) {
       .get(url)
       .then((response) => {
         console.log("API Data", response.data);
-        // setTemperature(response.data.V0);
-        // setHumidity(response.data.V1);
-        // setAirQuality(response.data.V2);
-        // setLocation(response.data.V3);
-        // setMethane(response.data.V4);
-        // setAlcohol(response.data.V5);
-        // setCarbonMonoxide(response.data.V6);
-        // setFlammable(response.data.V7);
+        const data = response.data;
+
+        // Map the API data into state
+        data.forEach((item) => {
+          console.log("hehe",data)
+          switch(item.param) {
+              //LOAD 1
+              case 'voltage1': setVoltage1(item.value); break;
+              case 'current1': setCurrent1(item.value); break;
+              case 'power1': setPower1(item.value); break;
+              case 'frequency1': setFrequency1(item.value); break;
+              case 'power_factor1': setPowerFactor1(item.value); break;
+              case 'energy1': setEnergy1(item.value); break;
+              //LOAD 2
+              case 'voltage2': setVoltage2(item.value); break;
+              case 'current2': setCurrent2(item.value); break;
+              case 'power2': setPower2(item.value); break;
+              case 'frequency2': setFrequency2(item.value); break;
+              case 'power_factor2': setPowerFactor2(item.value); break;
+              case 'energy2': setEnergy2(item.value); break;
+              //LOAD 3
+              case 'voltage3': setVoltage3(item.value); break;
+              case 'current3': setCurrent3(item.value); break;
+              case 'power3': setPower3(item.value); break;
+              case 'frequency3': setFrequency3(item.value); break;
+              case 'power_factor3': setPowerFactor3(item.value); break;
+              case 'energy3': setEnergy3(item.value); break;
+              //Environmental Data
+              case 'smoke': setSmoke(item.value); break;
+              case 'temperature': setTemperature(item.value); break;
+              case 'humidity': setHumidity(item.value); break;
+              default: break;
+            }
+          }
+        );
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -105,36 +174,36 @@ function DashboardComponent(props) {
               <Col lg="12">
                 <Card className="card-chart">
                   <CardHeader className="card-header">
-                    <h5 style={{ textAlign: "center" }}>LOAD 1</h5>
+                    <h5 style={{ textAlign: "center" }}>LOAD 1 </h5>
                     <CardTitle tag="h6">
                       <div className="d-flex justify-content-between mb-2">
                         <div>Voltage</div>
-                        <div>0</div>
+                        <div>{voltage1} V</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Current</div>
-                        <div>0</div>
+                        <div>{current1} Amp</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power</div>
-                        <div>0</div>
+                        <div>{power1} Watt</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Frequency</div>
-                        <div>0</div>
+                        <div>{frequency1} Hz</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power Factor</div>
-                        <div>0</div>
+                        <div>{powerFactor1}</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Energy Consumption</div>
-                        <div>0</div>
+                        <div>{energy1} KWh</div>
                       </div>
                     </CardTitle>
                   </CardHeader>
@@ -145,39 +214,39 @@ function DashboardComponent(props) {
 
           <Col lg="4">
             <Row className="mb-3">
-            <Col lg="12">
+              <Col lg="12">
                 <Card className="card-chart">
                   <CardHeader className="card-header">
-                    <h5 style={{ textAlign: "center" }}>LOAD 2</h5>
+                    <h5 style={{ textAlign: "center" }}>LOAD 2 </h5>
                     <CardTitle tag="h6">
                       <div className="d-flex justify-content-between mb-2">
-                        <div>Voltage</div>
-                        <div>0</div>
+                        <div>Voltage V</div>
+                        <div>{voltage2}</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Current</div>
-                        <div>0</div>
+                        <div>{current2} Amp</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power</div>
-                        <div>0</div>
+                        <div>{power2} Watt</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Frequency</div>
-                        <div>0</div>
+                        <div>{frequency2}</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power Factor</div>
-                        <div>0</div>
+                        <div>{powerFactor2}</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Energy Consumption</div>
-                        <div>0</div>
+                        <div>{energy2} KWh</div>
                       </div>
                     </CardTitle>
                   </CardHeader>
@@ -188,39 +257,39 @@ function DashboardComponent(props) {
 
           <Col lg="4">
             <Row className="mb-3">
-            <Col lg="12">
+              <Col lg="12">
                 <Card className="card-chart">
                   <CardHeader className="card-header">
-                    <h5 style={{ textAlign: "center" }}>LOAD 3</h5>
+                    <h5 style={{ textAlign: "center" }}>LOAD 3 </h5>
                     <CardTitle tag="h6">
                       <div className="d-flex justify-content-between mb-2">
                         <div>Voltage</div>
-                        <div>0</div>
+                        <div>{voltage3} V</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Current</div>
-                        <div>0</div>
+                        <div>{current3} Amp</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power</div>
-                        <div>0</div>
+                        <div>{power3} Watt</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Frequency</div>
-                        <div>0</div>
+                        <div>{frequency3} Hz</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Power Factor</div>
-                        <div>0</div>
+                        <div>{powerFactor3}</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
                         <div>Energy Consumption</div>
-                        <div>0</div>
+                        <div>{energy3} KWh</div>
                       </div>
                     </CardTitle>
                   </CardHeader>
@@ -239,7 +308,7 @@ function DashboardComponent(props) {
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader className="card-header">
-                <CardTitle tag="h5">Temperature: 0</CardTitle>
+                <CardTitle tag="h5">Temperature: {temperature}</CardTitle>
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
@@ -251,7 +320,7 @@ function DashboardComponent(props) {
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader className="card-header">
-                <CardTitle tag="h5">Humidity: 0</CardTitle>
+                <CardTitle tag="h5">Humidity: {humidity}</CardTitle>
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
@@ -263,7 +332,7 @@ function DashboardComponent(props) {
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader className="card-header">
-                <CardTitle tag="h5">Smoke: 0</CardTitle>
+                <CardTitle tag="h5">Smoke: {smoke}</CardTitle>
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
