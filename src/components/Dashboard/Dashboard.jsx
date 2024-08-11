@@ -55,7 +55,7 @@ function DashboardComponent(props) {
   useEffect(() => {
     const interval = setInterval(() => {
       setDoc();
-    }, 3000);
+    }, 60000);
 
     return () => clearInterval(interval);
   }, []);
