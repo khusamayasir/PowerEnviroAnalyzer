@@ -55,58 +55,11 @@ function DashboardComponent(props) {
   useEffect(() => {
     const interval = setInterval(() => {
       setDoc();
-    }, 3000);
+    }, 60000);
 
     return () => clearInterval(interval);
   }, []);
-
-  useEffect(() => {
-    let url = 'https://power-enviro-analyzer-server.vercel.app/api';
-    axios
-      .get(url)
-      .then((response) => {
-        console.log("API Data", response.data);
-        const data = response.data;
-
-        // Map the API data into state
-        data.forEach((item) => {
-          console.log("hehe",data)
-          switch(item.param) {
-              //LOAD 1
-              case 'voltage1': setVoltage1(item.value); break;
-              case 'current1': setCurrent1(item.value); break;
-              case 'power1': setPower1(item.value); break;
-              case 'frequency1': setFrequency1(item.value); break;
-              case 'power_factor1': setPowerFactor1(item.value); break;
-              case 'energy1': setEnergy1(item.value); break;
-              //LOAD 2
-              case 'voltage2': setVoltage2(item.value); break;
-              case 'current2': setCurrent2(item.value); break;
-              case 'power2': setPower2(item.value); break;
-              case 'frequency2': setFrequency2(item.value); break;
-              case 'power_factor2': setPowerFactor2(item.value); break;
-              case 'energy2': setEnergy2(item.value); break;
-              //LOAD 3
-              case 'voltage3': setVoltage3(item.value); break;
-              case 'current3': setCurrent3(item.value); break;
-              case 'power3': setPower3(item.value); break;
-              case 'frequency3': setFrequency3(item.value); break;
-              case 'power_factor3': setPowerFactor3(item.value); break;
-              case 'energy3': setEnergy3(item.value); break;
-              //Environmental Data
-              case 'smoke': setSmoke(item.value); break;
-              case 'temperature': setTemperature(item.value); break;
-              case 'humidity': setHumidity(item.value); break;
-              default: break;
-            }
-          }
-        );
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-
+  
   const setDoc = () => {
     let url = 'https://power-enviro-analyzer-server.vercel.app/api';
     axios
