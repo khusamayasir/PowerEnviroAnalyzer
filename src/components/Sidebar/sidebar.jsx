@@ -22,6 +22,8 @@ const Sidebar = ({ handleCallBack }) => {
     <div>
       <div id="sideMenu" className={`h-100 wrapper inter-family`}>
         <nav id="sidebar" className={isNotActive ? "active" : ""}>
+          <div className="w-100 text-right">
+
           <button
             type="button"
             id="sidebarCollapse"
@@ -31,6 +33,7 @@ const Sidebar = ({ handleCallBack }) => {
             <span className={isNotActive ? "" : "hidden"}>{barsIcon}</span>
             <span className={isNotActive ? "hidden" : ""}>{crossIcon}</span>
           </button>
+          </div>
           <div className="sidebar-header">
             <img
               src={image}
@@ -39,44 +42,44 @@ const Sidebar = ({ handleCallBack }) => {
               width={isNotActive ? "20" : "70"}
               alt="user"
             ></img>
-            <h5 className="websiteName text-uppercase text-wrap">Power Enviro Analyzer</h5>
+            <h5 className="websiteName text-uppercase text-truncate">Power Enviro Analyzer</h5>
           </div>
 
           <ul className="list-unstyled components">
             <li className="list-item">
               <i className="fas fa-th-large icon-color"></i>
               <Link to="/Dashboard">
-                <small className="text-uppercase">Dashboard</small>
+                <small className="text-uppercase text-truncate">Dashboard</small>
               </Link>
             </li>
             <li className="list-item">
               <i className="fas fa-pedestal icon-color"></i>
               <Link to="/LoadOne">
-                <small className="text-uppercase">Load 1</small>
+                <small className="text-uppercase text-truncate">Load 1</small>
               </Link>
             </li>
             <li className="list-item">
               <i className="fas fa-th-large icon-color"></i>
               <Link to="/LoadTwo">
-                <small className="text-uppercase">Load 2</small>
+                <small className="text-uppercase text-truncate">Load 2</small>
               </Link>
             </li>
             <li className="list-item">
               <i className="fas fa-th-large icon-color"></i>
               <Link to="/LoadThree">
-                <small className="text-uppercase">Load 3</small>
+                <small className="text-uppercase text-truncate">Load 3</small>
               </Link>
             </li>
             <li className="list-item">
               <i className="fas fa-file-alt icon-color"></i>
               <Link to="/Report">
-                <small className="text-uppercase">Reports</small>
+                <small className="text-uppercase text-truncate">Reports</small>
               </Link>
             </li>
             <li className="list-item" onClick={handleLogout}>
               <i className="fas fa-sign-out-alt icon-color"></i>
               <Link to="/">
-                <small className="text-uppercase">Logout</small>
+                <small className="text-uppercase text-truncate">Logout</small>
               </Link>
             </li>
           </ul>

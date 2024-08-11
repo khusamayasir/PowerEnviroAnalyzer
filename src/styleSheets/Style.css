@@ -295,3 +295,34 @@ body {
 #sideMenu {
   transition: width 1.0s ease;
 }
+
+.sideMenuOpen{
+  width: 20% !important;
+}
+.sideMenuClose{
+  width: 6% !important;
+}
+.mainMenuOpen{
+  width: 94% !important;
+}
+.mainMenuClose{
+  width: 80% !important;
+}
+
+@media screen and (max-width:600px) {
+  /* #sideMenu{
+    width: 100vw !important;
+  } */
+  .sideMenuOpen{
+    width: 100vw !important;
+  }
+  .sideMenuClose{
+    width: 15vw !important;
+  }
+  .mainMenuOpen{
+    width: 85vw !important;
+  }
+  .mainMenuClose{
+    width: 0vw !important;
+  }
+}
