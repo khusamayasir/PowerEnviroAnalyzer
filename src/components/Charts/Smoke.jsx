@@ -1,7 +1,7 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 
-const DustParticleGraph = () => {
+const SmokeGraph = () => {
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
@@ -38,4 +38,4 @@ const DustParticleGraph = () => {
   );
 };
 
-export default DustParticleGraph;
+export default SmokeGraph;

@@ -61,7 +61,7 @@ const Login = (props) => {
 
               <img
                 className="companyLogo"
-                height={150}
+                height={120}
                 src={logo}
                 alt="logo"
               />

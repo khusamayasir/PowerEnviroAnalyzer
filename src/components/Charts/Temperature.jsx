@@ -35,7 +35,7 @@ const TemperatureGraph = () => {
 
   return (
     <div>
-      <Bar data={data} options={options} style={{ backgroundColor: "white"}}/>
+      <Bar data={data} options={options} style={{ backgroundColor: "white",width:"100%",height:"100%"}}/>
     </div>
   );
 };

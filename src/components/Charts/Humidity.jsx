@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import axios from "axios";
 
-const AirQualityGraph = () => {
+const HumidityGraph = () => {
   const [air, setAir] = useState([50, 60, 55, 70, 65, 75]);
   const [labels, setLabels] = useState([
     "12 AM", "1 AM", "2 AM", "3 AM", "4 AM", "5 AM", "6 AM", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM",
@@ -73,4 +73,4 @@ const AirQualityGraph = () => {
   );
 };
 
-export default AirQualityGraph;
+export default HumidityGraph;

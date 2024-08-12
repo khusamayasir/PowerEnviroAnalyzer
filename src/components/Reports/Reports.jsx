@@ -33,6 +33,7 @@ function ReportComponent(props) {
   const [alcohol, setAlcohol] = useState(0);
   const [carbonMonoxide, setCarbonMonoxide] = useState(0);
   const [flammable, setFlammable] = useState(0);
+  const [energyConsumption, setEnergyConsumption] = useState(0)
 
   const setBgChartData = (name) => {
     setbigChartData(name);
@@ -89,7 +90,7 @@ function ReportComponent(props) {
               <Col className="d-flex justify-content-between ">
                 <h4>Current Stats</h4>
                 <Button
-                  style={{ fontSize: 14, background: "#0d633c" }}
+                  style={{ fontSize: 14, background: "rgb(40 39 158)" }}
                   onClick={() =>
                     alert("This functionality is under construction")
                   }
@@ -98,7 +99,7 @@ function ReportComponent(props) {
                 </Button>
               </Col>
             </Row>
-            <Row className="mb-3">
+            <Row className="mb-3 responsive-rows-gap">
               <Col lg="6">
                 <Card className="card-chart">
                   <CardHeader>
@@ -115,57 +116,37 @@ function ReportComponent(props) {
                   </CardHeader>
                 </Card>
               </Col>
-            </Row>
-            <Row className="mb-3">
               <Col lg="6">
                 <Card className="card-chart">
                   <CardHeader>
-                    <h5 className="card-category">Air Quality</h5>
-                    <CardTitle tag="h6">{airQuality}</CardTitle>
+                    <h5 className="card-category">Smoke</h5>
+                    <CardTitle tag="h6">0</CardTitle>
+                  </CardHeader>
+                </Card>
+              </Col>
+            </Row>
+            <Row className="mb-3 responsive-rows-gap">
+              <Col lg="6">
+                <Card className="card-chart">
+                  <CardHeader>
+                    <h5 className="card-category">Load 1</h5>
+                    <CardTitle tag="h6">Energy Consumption</CardTitle>
                   </CardHeader>
                 </Card>
               </Col>
               <Col lg="6">
                 <Card className="card-chart">
                   <CardHeader>
-                    <h5 className="card-category">Pressure</h5>
-                    <CardTitle tag="h6">{pressure}</CardTitle>
+                    <h5 className="card-category">Load 2</h5>
+                    <CardTitle tag="h6">Energy Consumption</CardTitle>
                   </CardHeader>
                 </Card>
               </Col>
-            </Row>
-
-            <Row>
-              <Col lg="12">
+              <Col lg="6">
                 <Card className="card-chart">
                   <CardHeader>
-                    <h5 style={{ textAlign: "center" }}>Gas Concentration</h5>
-                    <CardTitle tag="h6">
-                      <div className="d-flex justify-content-between mb-2">
-                        <div>Methane</div>
-                        <div>{methane}</div>
-                      </div>
-
-                      <div className="d-flex justify-content-between mb-2">
-                        <div>Carbon Monoxide</div>
-                        <div>{carbonMonoxide}</div>
-                      </div>
-
-                      <div className="d-flex justify-content-between mb-2">
-                        <div>Alcohol</div>
-                        <div>{alcohol}</div>
-                      </div>
-
-                      <div className="d-flex justify-content-between mb-2">
-                        <div>Flammable</div>
-                        <div>{flammable}</div>
-                      </div>
-
-                      <div className="d-flex justify-content-between mb-2">
-                        <div>Dust Particle</div>
-                        <div>0</div>
-                      </div>
-                    </CardTitle>
+                    <h5 className="card-category">Load 3</h5>
+                    <CardTitle tag="h6">Energy Consumption</CardTitle>
                   </CardHeader>
                 </Card>
               </Col>
