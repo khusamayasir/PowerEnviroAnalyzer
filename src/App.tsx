@@ -42,15 +42,18 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <div className="d-flex" style={{ height: "100vh", width: "100vw" }}>
+        <div className="d-flex position-relative" style={{ height: "100vh", width: "100vw", overflowX: "hidden"}}>
           {/* {path != `/` && ( */}
-          <div className={`px-0 ${isMenuOpened ? "w-20" : "w-10"}`}>
+          {!headerExcludingScreens.includes(window.location.pathname) && (
+          <div id="sideMenu" style={{position:"sticky", top: "0px"}} className={`px-0 ${isMenuOpened ? "w-20" : "w-10"}`}>
             {!headerExcludingScreens.includes(window.location.pathname) && (
               <Sidebar handleCallBack={setWidthForSideColumn} />
             )}
           </div>
+          )}
           <div
-            className={`px-2 DMSans-family ${isMenuOpened ? "w-80" : "w-90"} `}
+            className={`px-2 DMSans-family ${isMenuOpened ? "mainMenuClose" : "mainMenuOpen"} $
+              {headerExcludingScreens.includes(window.location.pathname) && "w-100" } `}
             // md={
             //   !headerExcludingScreens.includes(window.location.pathname)
             //     ? 10

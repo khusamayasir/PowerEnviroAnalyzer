@@ -42,18 +42,22 @@ body {
 }
 
 .loginDashboard {
-  /* display: flex; */
+  display: flex;
   position: relative;
   /* padding: 10.25rem 29.125rem 7.875rem 29.1875rem; */
   padding: 20px;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-direction: column;
+  /* justify-content: center !important;
+  align-items: center !important; 
+  flex-direction: column;*/
   background-color: #ffffffbf;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 1px 0 rgba(0, 0, 0, 0.19);
   /* width: 31.6875rem !important;
     height: 29.875rem !important; */
   /* flex-shrink: 0; */
+}
+
+.loginLogo{
+  width: 50%;
 }
 
 .loginInputs {
@@ -269,6 +273,14 @@ body {
   flex: 2 1 0 !important;
 }
 
+.tileStyle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+  max-height: calc(90vh - 0px);
+  /* overflow-y: auto; */
+}
+
 .w-20 {
   width: 20% !important;
 }
@@ -293,36 +305,56 @@ body {
 }
 
 #sideMenu {
-  transition: width 1.0s ease;
+  transition: width 1s ease;
 }
 
-.sideMenuOpen{
+.sideMenuOpen {
   width: 20% !important;
 }
-.sideMenuClose{
+.sideMenuClose {
   width: 6% !important;
 }
-.mainMenuOpen{
+.mainMenuOpen {
   width: 94% !important;
 }
-.mainMenuClose{
+.mainMenuClose {
   width: 80% !important;
 }
 
-@media screen and (max-width:600px) {
+.loginDivWidth{
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
   /* #sideMenu{
     width: 100vw !important;
   } */
-  .sideMenuOpen{
+  .sideMenuOpen {
     width: 100vw !important;
   }
-  .sideMenuClose{
+  .sideMenuClose {
     width: 15vw !important;
   }
-  .mainMenuOpen{
+  .mainMenuOpen {
     width: 85vw !important;
   }
-  .mainMenuClose{
+  .mainMenuClose {
     width: 0vw !important;
+  }
+  .tileStyle {
+    display: block;
+  }
+  .responsive-rows-gap {
+    gap: 17px;
+  }
+
+  .loginDashboard{
+    display: block;
+  }
+  .loginLogo{
+    width: 100%;
+  }
+  .loginDivWidth{
+    width: 100%;
   }
 }

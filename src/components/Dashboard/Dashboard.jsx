@@ -170,7 +170,7 @@ function DashboardComponent(props) {
         </Row>
         <Row>
           <Col lg="4">
-            <Row className="mb-3">
+            <Row className="mb-3 responsive-rows-gap">
               <Col lg="12">
                 <Card className="card-chart">
                   <CardHeader className="card-header">
@@ -213,7 +213,7 @@ function DashboardComponent(props) {
           </Col>
 
           <Col lg="4">
-            <Row className="mb-3">
+            <Row className="mb-3 responsive-rows-gap">
               <Col lg="12">
                 <Card className="card-chart">
                   <CardHeader className="card-header">
@@ -256,7 +256,7 @@ function DashboardComponent(props) {
           </Col>
 
           <Col lg="4">
-            <Row className="mb-3">
+            <Row className="mb-3 responsive-rows-gap">
               <Col lg="12">
                 <Card className="card-chart">
                   <CardHeader className="card-header">
@@ -304,7 +304,7 @@ function DashboardComponent(props) {
             <h4 className="text-left mb-3">Environmental Data</h4>
           </Col>
         </Row>
-        <Row className="mb-3">
+        <Row className="mb-3 responsive-rows-gap">
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader className="card-header">

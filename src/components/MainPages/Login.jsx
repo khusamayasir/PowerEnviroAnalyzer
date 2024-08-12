@@ -19,16 +19,6 @@ const Login = (props) => {
     { email: "manazirjafri2000@gmail.com", password: "Admin@123" }
   ];
 
-  useEffect(() => {
-    if (
-      window.location.href === "http://localhost:5173/" ||
-      window.location.href === "http://127.0.0.1:5173/"
-    ) {
-      setEmail("usamayasir32@gmail.com");
-      setPassword("Admin@123");
-    }
-  }, []);
-
   const handleChangeType = () => {
     setType(typeOf === "password" ? "text" : "password");
   };
@@ -64,25 +54,27 @@ const Login = (props) => {
 
   return (
     <div className="LoginBg vh-100 img_bg">
-      <div className="mx-auto">
-        <div className="m-auto d-flex align-items-center">
-          <div className="loginDashboard">
-            <div className="d-flex justify-content-center margin-auto">
-              <div>
-                <img className="companyLogo" height={80} src={logo} alt="logo" />
-              </div>
-              <div
+      <div className="mx-auto loginDivWidth">
+        <div className="w-100 d-flex align-items-center">
+          <div className="loginDashboard w-100">
+            <div className="d-flex align-items-center loginLogo justify-content-center margin-auto">
+
+              <img
+                className="companyLogo"
+                height={150}
+                src={logo}
+                alt="logo"
+              />
+              {/* <div
                 className="d-flex justify-content-center flex-column mt-3"
                 style={{ marginLeft: "14px" }}
               >
                 <h1 className="loginDashboardCompany crete-family loginESquareTxt">
                   Power Enviro Analyzer
                 </h1>
-              </div>
+              </div> */}
             </div>
-            <div className="text-center m-3 crete-family">
-              <h3>Login</h3>
-            </div>
+
             <div>
               <div>
                 <p className="crete-family mb-1 mt-2 text-left">User</p>
@@ -118,32 +110,32 @@ const Login = (props) => {
                   </div>
                 </InputGroup>
               </div>
-            </div>
-            <Button
-              className="btn themedButton w-100 text-white mt-3 inter-family"
-              onClick={handleLogin}
-              disabled={isLoading}
-              ref={loginBtn}
-            >
-              {isLoading ? (
-                <div className="d-flex justify-content-center">
-                  <div className="spinner" />
+              <Button
+                className="btn themedButton w-100 text-white mt-3 inter-family"
+                onClick={handleLogin}
+                disabled={isLoading}
+                ref={loginBtn}
+              >
+                {isLoading ? (
+                  <div className="d-flex justify-content-center">
+                    <div className="spinner" />
+                  </div>
+                ) : (
+                  "Login"
+                )}
+              </Button>
+              {error && (
+                <div className="alert alert-danger mt-3 text-center" role="alert">
+                  <img src={cancel} alt="cancel" /> {error}
                 </div>
-              ) : (
-                "Login"
               )}
-            </Button>
-            {error && (
-              <div className="alert alert-danger mt-3 text-center" role="alert">
-                <img src={cancel} alt="cancel" /> {error}
-              </div>
-            )}
-            <Link
-              to="/ForgotPassword"
-              className="forgotPassword d-flex justify-content-center mt-2 w-100 crete-family cursor-pointer"
-            >
-              Forgot Password?
-            </Link>
+              <Link
+                to="/ForgotPassword"
+                className="forgotPassword d-flex justify-content-center mt-2 w-100 crete-family cursor-pointer"
+              >
+                Forgot Password?
+              </Link>
+            </div>
           </div>
         </div>
       </div>
