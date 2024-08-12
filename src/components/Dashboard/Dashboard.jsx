@@ -20,9 +20,9 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 import axios from "axios";
-import AirQualityGraph from "../Charts/AirQuality";
-import TemperatureGraph from "../Charts/Temperature";
-import DustParticleGraph from "../Charts/DustParticles";
+import HumidityGraph from '../Charts/Humidity'
+import SmokeGraph from '../Charts/Smoke'
+import TemperatureGraph from '../Charts/Temperature'
 import HeadingTag from "../HeadingTag";
 
 function DashboardComponent(props) {
@@ -70,36 +70,36 @@ function DashboardComponent(props) {
 
         // Map the API data into state
         data.forEach((item) => {
-          console.log("hehe",data)
-          switch(item.param) {
-              //LOAD 1
-              case 'voltage1': setVoltage1(item.value); break;
-              case 'current1': setCurrent1(item.value); break;
-              case 'power1': setPower1(item.value); break;
-              case 'frequency1': setFrequency1(item.value); break;
-              case 'power_factor1': setPowerFactor1(item.value); break;
-              case 'energy1': setEnergy1(item.value); break;
-              //LOAD 2
-              case 'voltage2': setVoltage2(item.value); break;
-              case 'current2': setCurrent2(item.value); break;
-              case 'power2': setPower2(item.value); break;
-              case 'frequency2': setFrequency2(item.value); break;
-              case 'power_factor2': setPowerFactor2(item.value); break;
-              case 'energy2': setEnergy2(item.value); break;
-              //LOAD 3
-              case 'voltage3': setVoltage3(item.value); break;
-              case 'current3': setCurrent3(item.value); break;
-              case 'power3': setPower3(item.value); break;
-              case 'frequency3': setFrequency3(item.value); break;
-              case 'power_factor3': setPowerFactor3(item.value); break;
-              case 'energy3': setEnergy3(item.value); break;
-              //Environmental Data
-              case 'smoke': setSmoke(item.value); break;
-              case 'temperature': setTemperature(item.value); break;
-              case 'humidity': setHumidity(item.value); break;
-              default: break;
-            }
+          console.log("hehe", data)
+          switch (item.param) {
+            //LOAD 1
+            case 'voltage1': setVoltage1(item.value); break;
+            case 'current1': setCurrent1(item.value); break;
+            case 'power1': setPower1(item.value); break;
+            case 'frequency1': setFrequency1(item.value); break;
+            case 'power_factor1': setPowerFactor1(item.value); break;
+            case 'energy1': setEnergy1(item.value); break;
+            //LOAD 2
+            case 'voltage2': setVoltage2(item.value); break;
+            case 'current2': setCurrent2(item.value); break;
+            case 'power2': setPower2(item.value); break;
+            case 'frequency2': setFrequency2(item.value); break;
+            case 'power_factor2': setPowerFactor2(item.value); break;
+            case 'energy2': setEnergy2(item.value); break;
+            //LOAD 3
+            case 'voltage3': setVoltage3(item.value); break;
+            case 'current3': setCurrent3(item.value); break;
+            case 'power3': setPower3(item.value); break;
+            case 'frequency3': setFrequency3(item.value); break;
+            case 'power_factor3': setPowerFactor3(item.value); break;
+            case 'energy3': setEnergy3(item.value); break;
+            //Environmental Data
+            case 'smoke': setSmoke(item.value); break;
+            case 'temperature': setTemperature(item.value); break;
+            case 'humidity': setHumidity(item.value); break;
+            default: break;
           }
+        }
         );
       })
       .catch((error) => {
@@ -117,36 +117,36 @@ function DashboardComponent(props) {
 
         // Map the API data into state
         data.forEach((item) => {
-          console.log("hehe",data)
-          switch(item.param) {
-              //LOAD 1
-              case 'voltage1': setVoltage1(item.value); break;
-              case 'current1': setCurrent1(item.value); break;
-              case 'power1': setPower1(item.value); break;
-              case 'frequency1': setFrequency1(item.value); break;
-              case 'power_factor1': setPowerFactor1(item.value); break;
-              case 'energy1': setEnergy1(item.value); break;
-              //LOAD 2
-              case 'voltage2': setVoltage2(item.value); break;
-              case 'current2': setCurrent2(item.value); break;
-              case 'power2': setPower2(item.value); break;
-              case 'frequency2': setFrequency2(item.value); break;
-              case 'power_factor2': setPowerFactor2(item.value); break;
-              case 'energy2': setEnergy2(item.value); break;
-              //LOAD 3
-              case 'voltage3': setVoltage3(item.value); break;
-              case 'current3': setCurrent3(item.value); break;
-              case 'power3': setPower3(item.value); break;
-              case 'frequency3': setFrequency3(item.value); break;
-              case 'power_factor3': setPowerFactor3(item.value); break;
-              case 'energy3': setEnergy3(item.value); break;
-              //Environmental Data
-              case 'smoke': setSmoke(item.value); break;
-              case 'temperature': setTemperature(item.value); break;
-              case 'humidity': setHumidity(item.value); break;
-              default: break;
-            }
+          console.log("hehe", data)
+          switch (item.param) {
+            //LOAD 1
+            case 'voltage1': setVoltage1(item.value); break;
+            case 'current1': setCurrent1(item.value); break;
+            case 'power1': setPower1(item.value); break;
+            case 'frequency1': setFrequency1(item.value); break;
+            case 'power_factor1': setPowerFactor1(item.value); break;
+            case 'energy1': setEnergy1(item.value); break;
+            //LOAD 2
+            case 'voltage2': setVoltage2(item.value); break;
+            case 'current2': setCurrent2(item.value); break;
+            case 'power2': setPower2(item.value); break;
+            case 'frequency2': setFrequency2(item.value); break;
+            case 'power_factor2': setPowerFactor2(item.value); break;
+            case 'energy2': setEnergy2(item.value); break;
+            //LOAD 3
+            case 'voltage3': setVoltage3(item.value); break;
+            case 'current3': setCurrent3(item.value); break;
+            case 'power3': setPower3(item.value); break;
+            case 'frequency3': setFrequency3(item.value); break;
+            case 'power_factor3': setPowerFactor3(item.value); break;
+            case 'energy3': setEnergy3(item.value); break;
+            //Environmental Data
+            case 'smoke': setSmoke(item.value); break;
+            case 'temperature': setTemperature(item.value); break;
+            case 'humidity': setHumidity(item.value); break;
+            default: break;
           }
+        }
         );
       })
       .catch((error) => {
@@ -220,8 +220,8 @@ function DashboardComponent(props) {
                     <h5 style={{ textAlign: "center" }}>LOAD 2 </h5>
                     <CardTitle tag="h6">
                       <div className="d-flex justify-content-between mb-2">
-                        <div>Voltage V</div>
-                        <div>{voltage2}</div>
+                        <div>Voltage</div>
+                        <div>{voltage2} V</div>
                       </div>
 
                       <div className="d-flex justify-content-between mb-2">
@@ -305,22 +305,10 @@ function DashboardComponent(props) {
           </Col>
         </Row>
         <Row className="mb-3 responsive-rows-gap">
-          <Col lg="4">
+          <Col lg="4" className="responsive-rows-gap">
             <Card className="card-chart">
               <CardHeader className="card-header">
                 <CardTitle tag="h5">Temperature: {temperature}</CardTitle>
-              </CardHeader>
-              <CardBody>
-                <div className="chart-area">
-                  <AirQualityGraph />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col lg="4">
-            <Card className="card-chart">
-              <CardHeader className="card-header">
-                <CardTitle tag="h5">Humidity: {humidity}</CardTitle>
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
@@ -329,14 +317,27 @@ function DashboardComponent(props) {
               </CardBody>
             </Card>
           </Col>
-          <Col lg="4">
+          <Col lg="4" className="responsive-rows-gap">
+            <Card className="card-chart">
+              <CardHeader className="card-header">
+                <CardTitle tag="h5">Humidity: {humidity}</CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div className="chart-area">
+                  <HumidityGraph />
+
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col lg="4" className="responsive-rows-gap">
             <Card className="card-chart">
               <CardHeader className="card-header">
                 <CardTitle tag="h5">Smoke: {smoke}</CardTitle>
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <DustParticleGraph />
+                  <SmokeGraph />
                 </div>
               </CardBody>
             </Card>

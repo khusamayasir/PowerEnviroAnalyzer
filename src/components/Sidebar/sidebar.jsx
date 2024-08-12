@@ -19,7 +19,7 @@ const Sidebar = ({ handleCallBack }) => {
   }, [isNotActive]);
 
   return (
-    <div>
+    <div className="h-100">
       <div id="sideMenu" className={`h-100 wrapper inter-family`}>
         <nav id="sidebar" className={isNotActive ? "active" : ""}>
           <div className="w-100 text-right">
@@ -28,7 +28,7 @@ const Sidebar = ({ handleCallBack }) => {
             type="button"
             id="sidebarCollapse"
             onClick={() => setNotActive(!isNotActive)}
-            className="btn btn-custom"
+            className="btn btn-custom mt-2"
           >
             <span className={isNotActive ? "" : "hidden"}>{barsIcon}</span>
             <span className={isNotActive ? "hidden" : ""}>{crossIcon}</span>
@@ -42,7 +42,7 @@ const Sidebar = ({ handleCallBack }) => {
               width={isNotActive ? "20" : "70"}
               alt="user"
             ></img>
-            <h5 className="websiteName text-uppercase text-truncate">Power Enviro Analyzer</h5>
+            <h5 className="websiteName text-uppercase mt-2">Power Enviro Analyzer</h5>
           </div>
 
           <ul className="list-unstyled components">
@@ -53,19 +53,19 @@ const Sidebar = ({ handleCallBack }) => {
               </Link>
             </li>
             <li className="list-item">
-              <i className="fas fa-pedestal icon-color"></i>
+              <i className="fas fa-book icon-color"></i>
               <Link to="/LoadOne">
                 <small className="text-uppercase text-truncate">Load 1</small>
               </Link>
             </li>
             <li className="list-item">
-              <i className="fas fa-th-large icon-color"></i>
+              <i className="fas fa-book icon-color"></i>
               <Link to="/LoadTwo">
                 <small className="text-uppercase text-truncate">Load 2</small>
               </Link>
             </li>
             <li className="list-item">
-              <i className="fas fa-th-large icon-color"></i>
+              <i className="fas fa-book icon-color"></i>
               <Link to="/LoadThree">
                 <small className="text-uppercase text-truncate">Load 3</small>
               </Link>

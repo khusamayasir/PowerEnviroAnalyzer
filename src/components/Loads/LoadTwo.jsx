@@ -20,9 +20,9 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 import axios from "axios";
-import AirQualityGraph from "../Charts/AirQuality";
-import TemperatureGraph from "../Charts/Temperature";
-import DustParticleGraph from "../Charts/DustParticles";
+// import AirQualityGraph from "../Charts/AirQuality";
+// import TemperatureGraph from "../Charts/Temperature";
+// import DustParticleGraph from "../Charts/DustParticles";
 import HeadingTag from "../HeadingTag";
 
 function LoadTwoComponent(props) {
@@ -35,7 +35,7 @@ function LoadTwoComponent(props) {
           </Col>
         </Row>
 
-        <Row className="mb-3">
+        <Row className="mb-3 responsive-rows-gap">
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader className="card-header">
@@ -43,7 +43,7 @@ function LoadTwoComponent(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <AirQualityGraph />
+                  {/* <AirQualityGraph /> */}
                 </div>
               </CardBody>
             </Card>
@@ -56,7 +56,7 @@ function LoadTwoComponent(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <TemperatureGraph />
+                  {/* <TemperatureGraph /> */}
                 </div>
               </CardBody>
             </Card>
@@ -69,14 +69,14 @@ function LoadTwoComponent(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <DustParticleGraph />
+                  {/* <DustParticleGraph /> */}
                 </div>
               </CardBody>
             </Card>
           </Col>
         </Row>
 
-        <Row className="mb-3">
+        <Row className="mb-3 responsive-rows-gap">
           <Col lg="4">
             <Card className="card-chart">
               <CardHeader className="card-header">
@@ -84,7 +84,7 @@ function LoadTwoComponent(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <AirQualityGraph />
+                  {/* <AirQualityGraph /> */}
                 </div>
               </CardBody>
             </Card>
@@ -97,7 +97,7 @@ function LoadTwoComponent(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <TemperatureGraph />
+                  {/* <TemperatureGraph /> */}
                 </div>
               </CardBody>
             </Card>
@@ -110,7 +110,7 @@ function LoadTwoComponent(props) {
               </CardHeader>
               <CardBody>
                 <div className="chart-area">
-                  <DustParticleGraph />
+                  {/* <DustParticleGraph /> */}
                 </div>
               </CardBody>
             </Card>
