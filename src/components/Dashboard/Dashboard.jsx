@@ -61,7 +61,7 @@ function DashboardComponent(props) {
   }, []);
 
   useEffect(() => {
-    let url = 'https://power-enviro-analyzer-server.vercel.app/api';
+    let url = 'https://power-enviro-analyzer-server-beta.vercel.app/getData';
     axios
       .get(url)
       .then((response) => {
@@ -108,7 +108,7 @@ function DashboardComponent(props) {
   }, []);
 
   const setDoc = () => {
-    let url = 'https://power-enviro-analyzer-server.vercel.app/api';
+    let url = 'https://power-enviro-analyzer-server-beta.vercel.app/getData';
     axios
       .get(url)
       .then((response) => {
